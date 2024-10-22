@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24-challenge  layout (Sprite)</title>
+    <style>
+      body {
+        border: 10px solid #ffffff;
+        background-color: #179f53;
+        font-family: sans-serif;
+        margin: 0;
+      }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      header figure.logo {
+        background: url(../images/spriteweb.png) no-repeat;
+        background-position:  -10px -398px;
+        height: 192px;
+        width: 192px;
+      }
+      header menu {
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+      }
+      header menu a:is(:link, :visited) {
+        color: #fff;
+        background-color: #0006;
+        border-bottom: 4px solid #fff;
+        padding: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all 0.5s ease-in;
+        width: 120px;
+      }
+      header menu a:is(:hover) {
+        background-color: #0009;
+        border-bottom: 4px solid #ff0;
+      }
+      section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+      .images {
+        width: 823px;
+        height: 200px;
+        display: flex;
+        padding: 5px 5px 10px 5px;
+        background-color: #0009;
+        .spam1:is(:hover) .spam2{
+            background-color: #fff9;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            transition: all 0.5s ease-in;
+        }
+        .spam1 {
+            background: url(../images/spriteweb.png);
+            background-position: 300px -15px;
+            width: 300px;
+            margin: 10px;
+            border: #ffffff 4px solid;
+        }
+        .spam2 {
+            background-color: #fff5;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            text-align: center;
+            display: flex;
+            transition: all 0.5s ease-in;
+        }
+        
+      }
+     
+      section.first {
+            background-color: rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+            width: 814px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        div.info {
+            background-color: white;
+            display: flex;
+            gap: 35px;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            margin-bottom: 10px 0;
+        }
+
+        div aside {
+            background: url(../images/spriteweb.png) no-repeat;
+            width: 20%;
+        }
+
+        div p {
+            width: 60%;
+            text-align: justify;
+            line-height: 1.5em;
+        }
+
+        div p:hover {
+            color: #17a053;
+        }
+
+        div aside.first {
+            background-position: -282px -499px;
+            height: 95px;
+            width: 109px;
+        }
+
+        div aside.second {
+            background-position: -88px -210px;
+            height: 173px;
+            width: 109px;
+        }
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        width: 837px;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
+      footer figure.logo {
+        background: url(../images/spriteweb.png) no-repeat;
+        background-position:  -474px -416px;
+        height: 185px;
+        width: 330px;
+      }
+      footer menu {
+        display: flex;
+        gap: 1.2rem;
+        margin: 0;
+        padding: 0;
+      }
+      footer menu a:is(:link, :visited) {
+        color: #080808;
+        background-color: #fff;
+        border-bottom: 4px solid #fff;
+        padding: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        transition: all 0.5s ease-in;
+        width: 120px;
+      }
+      footer menu a:is(:hover) {
+        background-color: #fff;
+        border-bottom: 4px solid rgb(2, 111, 2);
+      }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <figure class="logo"> </figure>
+            <menu>
+                <a href="#">Home</a>
+                <a href="#">Abaut</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </menu>
+        </header>
+        <section>
+            <div class="images">
+                <spam class="spam1">
+                    <spam class="spam2">Sprite 01</spam>
+                </spam>
+                <spam class="spam1">
+                    <spam class="spam2">Sprite 02</spam>
+                </spam>
+                <spam class="spam1">
+                    <spam class="spam2">Sprite 03</spam>
+                </spam>
+            </div>
+        </section>
+        <section class="first">
+          <div class="info">
+              <aside class="first"></aside>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit aliquam impedit magnam quod, maxime deserunt cupiditate ratione ea saepe odit quasi culpa quam dolor voluptatibus reprehenderit quis a iusto corrupti hic placeat dolores aut! Dolorum ipsam architecto tempora blanditiis, accusantium pariatur omnis sunt enim error dolor quas, consequatur cupiditate eius necessitatibus, quidem corrupti officiis reprehenderit voluptate perspiciatis magni nostrum!
+              </p>
+              <aside class="second"></aside>
+          </div>
+          <div class="info">
+              <aside class="first"></aside>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit aliquam impedit magnam quod, maxime deserunt cupiditate ratione ea saepe odit quasi culpa quam dolor voluptatibus reprehenderit quis a iusto corrupti hic placeat dolores aut! Dolorum ipsam architecto tempora blanditiis, accusantium pariatur omnis sunt enim error dolor quas, consequatur cupiditate eius necessitatibus, quidem corrupti officiis reprehenderit voluptate perspiciatis magni nostrum!
+              </p>
+              <aside class="second"></aside>
+          </div>
+          <div class="info">
+              <aside class="first"></aside>
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit aliquam impedit magnam quod, maxime deserunt cupiditate ratione ea saepe odit quasi culpa quam dolor voluptatibus reprehenderit quis a iusto corrupti hic placeat dolores aut! Dolorum ipsam architecto tempora blanditiis, accusantium pariatur omnis sunt enim error dolor quas, consequatur cupiditate eius necessitatibus, quidem corrupti officiis reprehenderit voluptate perspiciatis magni nostrum!
+              </p>
+              <aside class="second"></aside>
+          </div>
+      </section>
+        <footer>
+            <figure class="logo"> </figure>
+            <menu>
+                <a href="#">Home</a>
+                <a href="#">Abaut</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+            </menu>
+        </footer>
+    </main>
+</body>
+</html>
