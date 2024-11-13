@@ -265,3 +265,124 @@ a{
 span{ background-color: rgb(41, 52, 206);}
 }
 }
+
+/*----------------------*/
+/* PUG */
+/*----------------------*/
+
+body.pug {
+
+    background-color: #442823;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23514F4C' width='11' height='11'/%3E%3Crect fill='%2354514e' x='10' width='11' height='11'/%3E%3Crect fill='%2356534f' y='10' width='11' height='11'/%3E%3Crect fill='%23595651' x='20' width='11' height='11'/%3E%3Crect fill='%235b5853' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%235e5a54' y='20' width='11' height='11'/%3E%3Crect fill='%23615d56' x='30' width='11' height='11'/%3E%3Crect fill='%23635f57' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23666159' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%2368645b' y='30' width='11' height='11'/%3E%3Crect fill='%236b665c' x='40' width='11' height='11'/%3E%3Crect fill='%236d685e' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23706b60' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23736d61' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23756f63' y='40' width='11' height='11'/%3E%3Crect fill='%23787265' x='50' width='11' height='11'/%3E%3Crect fill='%237a7466' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%237d7768' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%2380796a' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23827c6c' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23857e6d' y='50' width='11' height='11'/%3E%3Crect fill='%2387816f' x='60' width='11' height='11'/%3E%3Crect fill='%238a8371' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%238d8672' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%238f8874' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23928b76' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23948d78' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23979079' x='70' width='11' height='11'/%3E%3Crect fill='%2399927b' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%239c957d' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%239f977f' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23a19a80' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23a49d82' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23a69f84' x='80' width='11' height='11'/%3E%3Crect fill='%23a9a286' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23aba488' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23aea789' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23b0aa8b' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23b3ac8d' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23b5af8f' x='90' width='11' height='11'/%3E%3Crect fill='%23b8b291' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23bbb593' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23bdb794' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23c0ba96' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23c2bd98' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23c5bf9a' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23c7c29c' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23cac59e' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ccc8a0' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23cfcba2' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23d1cda3' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23d3d0a5' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23d6d3a7' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23d8d6a9' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23dbd9ab' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23dddcad' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23e0deaf' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23e2e1b1' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23e5e4b3' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23E7E7B5' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+
+    header {
+
+        h2 {
+            border-bottom: none;
+            max-width: 90%;
+            width: fit-content;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.763);
+            border-radius: 6px;
+        }
+    }
+
+
+    menu {
+        a:is(:link, :visited) {
+            color: black; 
+            border-radius: 80px;  
+            span {
+                background-color: rgb(217, 228, 167);
+                }
+            }
+
+            a:is(:hover) span {
+                width: 48px;
+            }
+
+            a:is(:hover) {
+                background-color: rgb(110, 110, 61);
+                
+            }
+
+
+        }
+
+    img.logopug {
+        border-radius: 190px;
+        background-color: rgba(213, 203, 138, 0.678);
+        object-fit: cover;
+        border: 4px solid;
+        color: rgb(101, 74, 0);
+        height: 200px;
+        width: 200px;
+        }
+
+    p{
+        color: rgb(255, 211, 129);
+    }
+
+}
+
+/*----------------------*/
+/* SASS */
+/*----------------------*/
+
+body.sass {
+
+    background-color: #442338;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23F547B5'/%3E%3Cstop offset='1' stop-color='%23330D20'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFB5C6' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFB5C6' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    header {
+
+        h2 {
+            border-bottom: none;
+            max-width: 90%;
+            width: fit-content;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.763);
+            border-radius: 6px;
+        }
+    }
+
+
+    menu {
+        a:is(:link, :visited) {
+            color: black; 
+            border-radius: 80px;  
+            span {
+                background-color: rgb(7, 91, 139);
+                }
+            }
+
+            a:is(:hover) span {
+                width: 48px;
+            }
+
+            a:is(:hover) {
+                background-color: rgb(102, 217, 246);
+                
+            }
+
+
+        }
+
+    img.logosass {
+        border-radius: 190px;
+        background-color: rgba(213, 203, 138, 0.678);
+        object-fit: cover;
+        border: 4px solid;
+        color: rgb(101, 0, 81);
+        height: 200px;
+        width: 200px;
+        }
+
+    p{
+        color: rgb(255, 129, 196);
+    }
+
+}
