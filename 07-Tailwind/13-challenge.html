@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpack Time</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .frames-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px;
+            max-width: 100%;
+        }
+        
+        .frame {
+            width: 375px;
+            height: 667px;
+            background: #261f2a;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            flex-shrink: 0;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Frame 1 - Pantalla inicial */
+        .frame-1 {
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+        .frame-1-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        
+        .frame-1-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40%;
+        }
+        
+        .app-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            background-color: #e0e0e0;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .app-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #c8c7c8;
+            margin-bottom: 30px;
+        }
+        
+        .start-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-width: 250px;
+        }
+        
+        .start-btn {
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-signin {
+            background-color: #4285F4;
+            color: white;
+        }
+        
+        .btn-signup {
+            background-color: white;
+            color: #4285F4;
+            border: 1px solid #4285F4 !important;
+        }
+        
+        /* Frames 2 y 3 - Estructura común */
+        .frame-top {
+            height: 180px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .frame-top img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .frame-content {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 25px;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            font-size: 16px;
+            color: #999;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .tab.active {
+            color: #4285F4;
+            font-weight: 600;
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #4285F4;
+        }
+        
+        .frame-header {
+            margin-bottom: 30px;
+        }
+        
+        .frame-header h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #c8c7c8;
+            margin-bottom: 5px;
+        }
+        
+        .frame-header p {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+        
+        .form-actions {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 15px;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: #4285F4;
+            color: white;
+        }
+        
+        .btn-secondary {
+            background-color: white;
+            color: #4285F4;
+            border: 1px solid #4285F4 !important;
+        }
+        
+        .frame-footer {
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .frame-footer img {
+            height: 60%;
+            object-fit: contain;
+        }
+        
+        .social-logins {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-login {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="frames-container">
+        <!-- Frame 1 - Pantalla inicial -->
+        <div class="frame frame-1" id="frame1">
+            <img src="/07-Tailwind/images/bg-inicio.png" 
+                 class="frame-1-bg">
+            
+            <div class="frame-1-content">
+                <div class="app-logo">
+                    <img src="/07-Tailwind/images/logo.png" 
+                         alt="Backpack Time Logo">
+                </div>
+                <h1 class="app-title">🐐welcome to
+                    cult of the lamb</h1>
+                <div class="start-buttons, col-end-1">
+                    <button class="start-btn btn-signin" id="goToSignIn">Sign In</button>
+                    <button class="start-btn btn-signup" id="goToSignUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Frame 2 - Sign In -->
+        <div class="frame hidden" id="frame2">
+            <div class="frame-top">
+                <img src="/07-Tailwind/images/2.PNG" 
+                     alt="Sign In Header">
+            </div>
+            
+            <div class="frame-content">
+                <div class="frame-header">
+                    <h2>Gates your account to login</h2>
+                    <p>High in / sign up</p>
+                </div>
+                
+                <form id="signinForm">
+                    <div class="form-group">
+                        <label>Gmail:</label>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" placeholder="Ingresa tu contraseña" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                        <button type="button" class="btn btn-secondary" id="backFromSignIn">OK</button>
+                        
+                        <div class="social-logins">
+                            <div class="social-login">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                                     class="social-icon">
+                                <span>Facebook</span>
+                            </div>
+                            <div class="social-login">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" 
+                                     class="social-icon">
+                                <span>Xbox</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Frame 3 - Sign Up (CON IMAGEN SUPERIOR Y MÁRGENES CORREGIDOS) -->
+        <div class="frame hidden" id="frame3">
+            <!-- Imagen superior añadida -->
+            <div class="frame-top">
+                <img src="/07-Tailwind/images/2.PNG" 
+                     alt="Sign Up Header">
+            </div>
+            
+            <div class="frame-content">
+                <div class="tabs">
+                    <div class="tab active" id="tabSignUp">Sign up</div>
+                    <div class="tab" id="tabSignIn">Sign in</div>
+                </div>
+                
+                <div class="frame-header">
+                    <h2 id="formTitle">Create your account</h2>
+                    <p>Gates your account to login</p>
+                    <p>High in / sign up</p>
+                </div>
+                
+                <form id="signupForm">
+                    <div class="form-group" id="phoneGroup">
+                        <label>Which number:</label>
+                        <input type="tel" placeholder="Ingresa tu número">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Gmail:</label>
+                        <input type="email" placeholder="Ingresa tu correo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" placeholder="Crea tu contraseña" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Sign up</button>
+                        <button type="button" class="btn btn-secondary" id="backFromSignUp">OK</button>
+                        
+                        <div class="social-logins">
+                            <div class="social-login">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" 
+                                     class="social-icon">
+                                <span>Facebook</span>
+                            </div>
+                            <div class="social-login">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" 
+                                     class="social-icon">
+                                <span>Xbox</span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="frame-footer">
+                <img src="https://via.placeholder.com/150x60/333333/ffffff?text=Backpack+Time" 
+                     alt="Backpack Time Footer">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Navegación entre frames
+        document.getElementById('goToSignIn').addEventListener('click', function() {
+            document.getElementById('frame1').classList.add('hidden');
+            document.getElementById('frame2').classList.remove('hidden');
+        });
+        
+        document.getElementById('goToSignUp').addEventListener('click', function() {
+            document.getElementById('frame1').classList.add('hidden');
+            document.getElementById('frame3').classList.remove('hidden');
+        });
+        
+        // Botones para volver al frame inicial
+        document.getElementById('backFromSignIn').addEventListener('click', function() {
+            document.getElementById('frame2').classList.add('hidden');
+            document.getElementById('frame1').classList.remove('hidden');
+        });
+        
+        document.getElementById('backFromSignUp').addEventListener('click', function() {
+            document.getElementById('frame3').classList.add('hidden');
+            document.getElementById('frame1').classList.remove('hidden');
+        });
+        
+        // Funcionalidad para las pestañas en el frame 3
+        document.getElementById('tabSignIn').addEventListener('click', function() {
+            document.getElementById('tabSignUp').classList.remove('active');
+            this.classList.add('active');
+            document.getElementById('formTitle').textContent = 'Login to your account';
+            document.getElementById('submitBtn').textContent = 'Sign in';
+            document.getElementById('phoneGroup').style.display = 'none';
+        });
+        
+        document.getElementById('tabSignUp').addEventListener('click', function() {
+            document.getElementById('tabSignIn').classList.remove('active');
+            this.classList.add('active');
+            document.getElementById('formTitle').textContent = 'Create your account';
+            document.getElementById('submitBtn').textContent = 'Sign up';
+            document.getElementById('phoneGroup').style.display = 'block';
+        });
+        
+        // Simulación de formularios
+        document.getElementById('signinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Sign in functionality would go here');
+        });
+        
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const action = document.getElementById('submitBtn').textContent;
+            alert(`${action} functionality would go here`);
+        });
+    </script>
+</body>
+</html>
