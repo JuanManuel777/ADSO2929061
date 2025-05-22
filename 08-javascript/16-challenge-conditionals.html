@@ -27,12 +27,14 @@
     }
 
     .weather.day {
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      background: url(../08-javascript/images/clima/dia.png);
+  
       color: #1e1e1e;
     }
 
     .weather.night {
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      background: url(../08-javascript/images/clima/noche.avif);
+      
       color: #f1f1f1;
     }
 
@@ -108,14 +110,15 @@
   </nav>
   <main>
     <header>
-      <h1>15 - Challenge Conditional</h1>
+      <h1>16 - Challenge Conditional</h1>
       <p>
         Solve problems using conditional logic.
       </p>
     </header>
     <section>
       <figure class="weather">
-        <input type="text" class="q" placeholder="Enter a location">
+        
+        <input type="text" class="q"   placeholder="Enter a location">
         <button class="btn">Show</button>
         <div class="show"></div>
       </figure>
@@ -151,8 +154,19 @@
           fog: data.current.vis_km
         };
 
-        weatherBox.classList.remove('day', 'night');
-        weatherBox.classList.add(info.isDay === 1 ? 'day' : 'night');
+        if (info.isDay == 1) {
+          weatherBox.classList.remove('night')
+          
+        }
+        else {
+          weatherBox.classList.add('night')
+        }
+        if(info.isDay == 0) {
+          weatherBox.classList.remove('day')
+        }
+        else {
+          weatherBox.classList.add('day')
+        }
 
         show.innerHTML = `
           <h3>${info.name}, ${info.country}</h3>
