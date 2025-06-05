@@ -122,6 +122,15 @@ body
             flex-direction: column;
             align-items: center;
             gap: 1rem;
+             img
+{
+    border: solid var(--color2) 0.2em;
+    border-radius: 400px;
+    height: 150px;
+    object-fit: cover;
+    width: 150px; 
+}
+
             h1{
                 font-size: 4rem;
                 font-weight: 200;
@@ -200,15 +209,7 @@ body
             }
         }
     }
-    img
-{
-    border: solid var(--color2) 0.2em;
-    border-radius: 400px;
-    height: 150px;
-    object-fit: cover;
-    width: 150px; 
-}
-
+   
         
 }
 
